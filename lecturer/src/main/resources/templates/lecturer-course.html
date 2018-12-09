@@ -34,7 +34,7 @@
 				<td th:text="${lecturercourse.teachingId}"></td>
 				<td th:text="${lecturercourse.userId}"></td>
 				<td th:text="${lecturercourse.courseId}"></td>		
-				<td><a th:href="@{'/courseenrollment' + ${lecturercourse.courseId}}">View Course Enrollment</a></td>  
+				<td><a th:href="@{'/courseenrollment/' + ${lecturercourse.courseId}}">View Course Enrollment</a></td>  
 			</tr>
 
 		</table>

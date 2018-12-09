@@ -7,15 +7,45 @@
 </head>
 
 <body>
-	<h1 align="center">Lecturer Course</h1>
+	<h1 align="center">Course Enrollment</h1>
+	
+<!-- 	<input type="text" th:field="*{CourseID}" /> -->
+	
+	
 	<table id="t02" cellpadding="2">
 		<tr>
-			<th><a href=""><h2>link to somewhere...</h2></a></th>
+			<th><a href="/lecturer-course"><h2>Back</h2></a></th>
 
 			<th><a align="right" href="/delete"><h2>link to another place...</h2></a></th>
 		</tr>
 	</table>
 	<table>
+	<form:form>
+		<table id="t01" border="2" width="70%" cellpadding="2">
+			<tr>
+				<th>Enrollment ID</th>
+				<th>Enrollment Date</th>
+	 			<th>Course ID</th>
+				<th>User ID</th>
+				<th>Grade</th>
+			</tr>
+
+
+			<tr th:each="studentcourse : ${list}">
+				<td th:text="${studentcourse.enrolmentId}"></td>
+				<td th:text="${studentcourse.enrolmentDate}"></td>
+	 			<td th:text="${studentcourse.courseId}"></td>
+				<td th:text="${studentcourse.userId}"></td>
+				<td th:text="${studentcourse.grade}"></td>
+			</tr>
+
+		</table>
+		<br />
+
+
+	</form:form>
+	
+
 
 
 	</table>
